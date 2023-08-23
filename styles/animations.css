@@ -12,3 +12,81 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes menu-button {
+    from {
+        left: -20px;
+    }
+    to {
+        left: -16px;
+    }
+}
+
+.theme-menu__button::after {
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.theme-menu__button:focus-visible {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.theme-menu__button:disabled {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.theme-menu__button:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:disabled::before {
+    animation: menu-button ease-in-out 1s infinite;
+}
+
+@keyframes button-text-color {
+    from {
+        color: var(--accent-color);
+    }
+    to {
+        color: var(--bg-color);
+    }
+}
+
+.animated-button:hover {
+    animation: button-text-color 1s ease;
+}
+
+@keyframes button-anima {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.animated-button:hover {
+    animation: button-text-color 1s ease;
+}
+
+.animated-button::before {
+    transform-origin: left center;
+    transform: scaleX(0);
+}
+
+.animated-button:hover::before {
+    animation: button-anima 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.animated-button {
+    transition: box-shadow 0.3s ease;
+}
