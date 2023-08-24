@@ -223,21 +223,25 @@
 }
 
 .animated-button:hover {
-  cursor: pointer;
+  color: var(--bg-color);
 }
 
 .animated-button::before {
   content: '';
-  display: inline-block;
+  display: block;
   position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
   height:100%;
   width: 100%;
-  inset: 0;
+  z-index: 0;
 }
 
 .animated-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
+
 
 
 @media (width <= 375px) {
