@@ -1,1 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --bg-pattern: url("/svg/pattern-light.svg");
+    --bg-color: #FFF;
+    --text-color: #000;
+    --accent-color: #000;
+    --icon-color: #FF0000;
+    --main-font: 'Inter', sans-serif;
+    --accent-font: 'Press Start 2P', fantasy;
+    --bold-weight: 700;
+    --normal-weight: 400;
+}
