@@ -20,7 +20,7 @@
     --normal-weight: 400;
 }
 
-@media (prefers-color-sheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
     --bg-pattern: url("/svg/pattern-dark.svg");
     --bg-color: #000;
