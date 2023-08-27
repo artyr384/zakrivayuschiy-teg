@@ -10,7 +10,7 @@
     --accent-color: #00CC14;
     --bold-weight: 785;
     --normal-weight: 465;
-
+    --animated-color: #00CC14;
     --shadow-color: #000;
     --gradient-color: #000;
     --gradient-top: #007F0C;
@@ -27,7 +27,7 @@
     --accent-color: #000;
     --bold-weight: 700;
     --normal-weight: 400;
-
+    --animated-color: #FFF;
     --shadow-color: #FFF;
     --gradient-color: #D3D3D3;
     --gradient-top: #E7E7E7;
@@ -46,7 +46,7 @@
     --accent-color: #00CC14;
     --bold-weight: 785;
     --normal-weight: 465;
-
+    --animated-color: #00CC14;
     --gradient-color: #000;
     --gradient-top: #007F0C;
     --gradient-down: #004306;
