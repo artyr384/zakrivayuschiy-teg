@@ -7,6 +7,7 @@
 .theme-dark {
     --bg-pattern: url("/svg/pattern-dark.svg");
     --bg-color: #000;
+    --floppy-icon: #00CC14;
     --accent-color: #00CC14;
     --bold-weight: 785;
     --normal-weight: 465;
@@ -24,6 +25,7 @@
 .theme-light {
     --bg-pattern: url("/svg/pattern-light.svg");
     --bg-color: #FFF;
+    --floppy-icon: #FFF;
     --accent-color: #000;
     --bold-weight: 700;
     --normal-weight: 400;
@@ -43,6 +45,7 @@
     :root {
     --bg-pattern: url("/svg/pattern-dark.svg");
     --bg-color: #000;
+    --floppy-icon: #00CC14;
     --accent-color: #00CC14;
     --bold-weight: 785;
     --normal-weight: 465;

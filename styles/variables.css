@@ -2,6 +2,7 @@
 :root {
     --bg-pattern: url("/svg/pattern-light.svg");
     --bg-color: #FFF;
+    --floppy-icon: #FFF;
     --text-color: #000;
     --accent-color: #000;
     --icon-color: #FF0000;

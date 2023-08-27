@@ -26,6 +26,7 @@
   background-image: var(--bg-gradient);
   font-family: var(--main-font, 'Inter'), sans-serif;
   font-variation-settings: 'wght' var(--normal-weight, 400);
+  background-attachment: fixed;
 }
 
 .header {
@@ -142,7 +143,7 @@
 
 .card__label {
   position: absolute;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, 'Press Start 2P'), fantasy;
   font-size: 14px;
   line-height: normal;
   text-transform: uppercase;
@@ -156,7 +157,6 @@
   .card__label {
     -webkit-text-stroke: 1px var(--shadow-color);
     text-shadow: none;
-    text-stroke: 1px var(--shadow-color);
   }
 }
 
@@ -173,7 +173,7 @@
 }
 
 .card__like {
-  padding-inline-end: 25px;
+  margin-inline-end: 25px;
   margin-block-end: 25px;
   display: flex;
   flex-direction: row;
@@ -197,6 +197,7 @@
   position: relative;
   top: 6px;
   left: 7px;
+  
 }
 
 .sparks {
@@ -237,8 +238,8 @@
   width: 21px;
   height: 21px;
   margin-inline-end: 8px;
-  background-color: var(--bg-color, #FFF);
-  color: var(--animated-color, #FFF);
+  background-color: var(--floppy-icon, #FFF);
+  color: inherit;
   mix-blend-mode: difference;
 }
 
@@ -301,6 +302,10 @@
     gap: 8px;
     padding-inline: 20px;
   }
+
+  #dialog {
+    overflow: hidden;
+  }
 }
 
 
@@ -334,13 +339,13 @@
   filter: invert(0.2);
 }
 
-.log__container {
+.dialog__container {
   background-color: var(--bg-color);
   color: var(--button-text-color);
   padding: 30px;
 }
 
-.log__text {
+.dialog__text {
   color: inherit;
   display: flex;
   flex-direction: row;
@@ -349,15 +354,15 @@
   margin-block-end: 30px;
 }
 
-.log__text > .floppy-icon {
+.dialog__text > .floppy-icon {
   width: 39px;
   height: 39px;
   flex-shrink: 0;
 }
 
-.log__label {
+.dialog__label {
   color: var(--accent-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, 'Press Start 2P'), fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -365,7 +370,7 @@
   text-transform: uppercase;
 }
 
-.log__button {
+.dialog__button {
   width: 100%;
   background-color: var(--bg-color);
   border: 2px solid var(--accent-color);
@@ -373,14 +378,18 @@
   text-transform: uppercase;
 }
 
-#log[open] {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  gap: 30px 20px;
-  align-items: center;
+.dialog__button:focus {
+  outline: none;
 }
 
-#log[open]::backdrop {
+#dialog[open] {
+  width: clamp(21.563rem, 21.21rem + 1.502vw, 22.563rem);
+  gap: 30px 20px;
+  align-items: center;
+  padding: 0;
+}
+
+#dialog[open]::backdrop {
   background-color: #000;
   opacity: 0.75;
 }
